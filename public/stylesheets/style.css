@@ -1,0 +1,42 @@
+body{
+ 
+	background: #eaeaea;
+	/* IE10 Consumer Preview */ 
+background: -ms-radial-gradient(center top, circle closest-corner, #FFFFFF 0%, #EAEAEA 50%);
+
+/* Mozilla Firefox */ 
+background: -moz-radial-gradient(center top, circle closest-corner, #FFFFFF 0%, #EAEAEA 50%);
+
+/* Opera */ 
+background: -o-radial-gradient(center top, circle closest-corner, #FFFFFF 0%, #EAEAEA 50%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #FFFFFF), color-stop(1, #EAEAEA));
+
+/* Webkit (Chrome 11+) */ 
+background: -webkit-radial-gradient(center top, circle closest-corner, #FFFFFF 0%, #EAEAEA 50%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background: radial-gradient(circle closest-corner at center top, #FFFFFF 0%, #EAEAEA 50%);
+}
+.logo{
+	margin: 40px auto;
+	width: 250px;
+}
+p{
+	font-family: 'PT Sans', sans-serif;
+}
+.textBody{
+	margin: 60px auto;
+	width: 550px;
+	text-align: justify;
+}
+hr{
+	height:1px;
+	color: #d3d2d1;
+	border: none;
+	background-color: #d3d2d1;
+}
+a{
+	color: #ff8b0f;
+}
