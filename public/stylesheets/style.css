@@ -41,3 +41,9 @@ p {
 a {
 	color: #ff8b0f;
 }
+
+::selection {
+	color: #2d2d2d;
+	text-shadow:none;
+	background-color: #ff8b0f;
+}
