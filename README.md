@@ -1,5 +1,7 @@
 Website of the Dublin University Computer Science Society
 
+All code lives in origin/gh-pages
+
 
 Test Deployment
 ===============
@@ -9,6 +11,9 @@ Running the following command will serve a Python web server from the current di
 ```bash
 python -m SimpleHTTPServer
 ```
+
+origin/gh-pages is deployed to http://nsno.github.io/ducss-site. Changes may take up to 10 minutes to show up there.
+
 
 Deployment
 ==========
