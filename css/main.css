@@ -171,6 +171,7 @@ section#events tr td {
 #date span.month {
 	color: #fff;
 	text-align: center;
+	text-transform: uppercase;
 	font-size: 1.5em;
 	font-weight: normal;
 }
@@ -187,8 +188,29 @@ section#events tr td {
 }
 
 .service {
-	width: 50%;
 	margin-bottom: 30px;
+}
+
+.service::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.service .left {
+	display: block;
+	float: left;
+	width: 49%;
+}
+
+.service .right {
+	display: block;
+	float: right;
+	width: 49%;
+}
+
+.service .right img {
+	margin-left: 60px;
 }
 
 footer {
