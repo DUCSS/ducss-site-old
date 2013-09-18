@@ -64,7 +64,7 @@ body {
 
 p {
 	line-height: 25px;
-	font-size: 0.7em;
+	font-size: 1.1em;
 	color: #808080;
 }
 
@@ -118,7 +118,8 @@ h2 {
 
 h3 {
 	font-weight: bold;
-	font-size: 0.7em;
+	font-size: 1.1em;
+	text-transform: uppercase;
 	margin-bottom: 10px;
 }
 
@@ -162,15 +163,15 @@ section#events tr td {
 
 #date span.day {
 	color: #fff;
-	font-size: 1.7em;
+	text-align: center;
+	font-size: 2.8em;
 	font-weight: bold;
 }
 
 #date span.month {
 	color: #fff;
-	margin: 0;
-	padding: 0;
-	font-size: 1.0em;
+	text-align: center;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
@@ -181,13 +182,13 @@ section#events tr td {
 #info span {
 	display: block;
 	margin-bottom: 10px;
-	font-size: 0.7em;
+	font-size: 1.1em;
 	color: #808080;
 }
 
 .service {
 	width: 50%;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 footer {
