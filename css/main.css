@@ -68,6 +68,10 @@ p {
 	color: #808080;
 }
 
+a {
+	text-decoration: none;
+}
+
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
@@ -81,14 +85,15 @@ header {
 
 ul.nav {
 	float: right;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 ul.nav li {
-	display: inline;
+	display: inline-block;
 	margin-left: 30px;
 	font-size: 1.1em;
 	color: #808080;
+	vertical-align: middle;
 }
 
 ul.nav li:first-child {
@@ -101,28 +106,39 @@ ul.nav a {
 	text-decoration: none;
 }
 
-header a#twitter {
-	float: right;
+ul.nav a#twitter {
+	display: inline-block;
+	padding-bottom: 0;
 	height: 41px;
 	width: 41px;
-	background: url(../assets/nav-twitter.png) top no-repeat;
+	background: url(../assets/social-twitter.png) top no-repeat;
 }
 
-header a#facebook {
-	float: right;
+ul.nav a#facebook {
+	display: inline-block;
+	padding-bottom: 0;
 	height: 41px;
 	width: 41px;
-	background: url(../assets/nav-facebook.png) top no-repeat;
+	background: url(../assets/social-facebook.png) top no-repeat;
 }
 
-ul.nav a:hover {
-	border-bottom: 2px solid #ff8b0f;
+ul.nav a#twitter:hover {
+	background: url(../assets/social-twitter.png) bottom no-repeat;
+	border-bottom: none;
+}
+
+ul.nav a#facebook:hover {
+	border-bottom: none;
+	background: url(../assets/social-facebook.png) bottom no-repeat;
 }
 
 h1 {
-	color: #ff8b0f;
+	width: 100%;
+	margin-bottom: 40px;
+	padding-bottom: 25px;
 	font-size: 1.6em;
-	margin-bottom: 15px;
+	color: #ff8b0f;
+	border-bottom: 1px solid #dedede; 
 }
 
 h2 {
@@ -136,14 +152,6 @@ h3 {
 	font-size: 1.1em;
 	text-transform: uppercase;
 	margin-bottom: 10px;
-}
-
-.divider {
-	height: 1px;
-	width: 100%;
-	margin-top: 30px;
-	margin-bottom: 40px;
-	background-color: #dedede;
 }
 
 section {
@@ -177,6 +185,7 @@ section {
 }
 
 #date span.day {
+	display: block;
 	color: #fff;
 	text-align: center;
 	font-size: 2.8em;
@@ -184,6 +193,7 @@ section {
 }
 
 #date span.month {
+	display: block;
 	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
@@ -303,7 +313,62 @@ button:active {
 }
 
 footer {
+	display: block;
+	padding-top: 40px;
 	height: 100px;
 	border-top: 5px solid #dedede;
 	background-color: #2d2d2d;
+}
+
+footer .left, footer .centre, footer .right {
+	clear: both;
+	display: inline-table;
+	width: 33%;
+}
+
+a.back-to-top {
+	display: block;
+	vertical-align: middle;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #808080;
+}
+
+footer #social {
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+}
+
+footer a#twitter {
+	display: inline-block;
+	margin-right: 30px;
+	vertical-align: middle;
+	height: 41px;
+	width: 41px;
+	background: url(../assets/social-twitter.png) top no-repeat;
+}
+
+footer a#facebook {
+	display: inline-block;
+	margin-right: 30px;
+	vertical-align: middle;
+	height: 41px;
+	width: 41px;
+	background: url(../assets/social-facebook.png) top no-repeat;
+}
+
+footer a#twitter:hover {
+	background: url(../assets/social-twitter.png) bottom no-repeat;
+}
+
+footer a#facebook:hover {
+	border-bottom: none;
+	background: url(../assets/social-facebook.png) bottom no-repeat;
+}
+
+footer img#logo {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 160px;
 }
