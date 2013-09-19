@@ -74,12 +74,12 @@ p {
 }
 
 header {
+	margin-bottom: 60px;
 	padding: 25px 0;
 	border-bottom: 1px solid #dedede;
 }
 
 ul.nav {
-	float: right;
 	padding-top: 20px;
 }
 
@@ -98,6 +98,20 @@ ul.nav a {
 	padding-bottom: 10px;
 	color: #808080;
 	text-decoration: none;
+}
+
+header a#twitter {
+	float: right;
+	height: 41px;
+	width: 41px;
+	background: url(../assets/nav-twitter.png) top no-repeat;
+}
+
+header a#facebook {
+	float: right;
+	height: 41px;
+	width: 41px;
+	background: url(../assets/nav-facebook.png) top no-repeat;
 }
 
 ul.nav a:hover {
@@ -132,14 +146,14 @@ h3 {
 }
 
 section {
-	padding-top: 60px;
+	margin-bottom: 60px;
 }
 
-section#events table {
+#events table {
 	padding-top: 50px;
 }
 
-section#events tr td {
+#events tr td {
 	clear: both;
 	width: 50%;
 	padding-right: 10px;
@@ -211,6 +225,80 @@ section#events tr td {
 
 .service .right img {
 	margin-left: 60px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input {
+	width: 70%;
+	height: 50px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: 2px solid #c6c6c6;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #2d2d2d;
+	background: #fff;
+	background: -moz-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, #ececec), color-stop(3px, #ffffff));
+	background: -webkit-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: -o-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: -ms-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: linear-gradient(to bottom, #ececec 0px, #ffffff 3px);
+}
+
+input:focus {
+	border-color: #ff8b0f;
+}
+
+textarea {
+	max-width: 100%;
+	max-height: 450px;
+	width: 85%;
+	margin-bottom: 20px;
+	padding-top: 5px;
+	padding-left: 10px;
+	border: 2px solid #c6c6c6;
+	border-radius: 5px;
+	font-size: 20px;
+	line-height: 30px;
+	color: #2d2d2d;
+	background: #fff;
+	background: -moz-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0px, #ececec), color-stop(3px, #ffffff));
+	background: -webkit-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: -o-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: -ms-linear-gradient(top, #ececec 0px, #ffffff 3px);
+	background: linear-gradient(to bottom, #ececec 0px, #ffffff 3px);
+}
+
+textarea:focus {
+	border-color: #ff8b0f;
+}
+
+button {
+	margin-bottom: 20px;
+	padding: 15px 50px;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #ff8b0f;
+	border: none;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #ffa13c;
+}
+
+button:active {
+	top: 1px;
 }
 
 footer {
