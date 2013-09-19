@@ -80,6 +80,7 @@ header {
 }
 
 ul.nav {
+	float: right;
 	padding-top: 20px;
 }
 
