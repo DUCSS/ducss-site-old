@@ -190,18 +190,23 @@ section {
 	margin-bottom: 50px;
 }
 
-.col-left {
-	display: inline-table;
-	width: 49%;
+.row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.col {
+	width: 50%;
+	float: left;
 	padding-right: 20px;
 	box-sizing: border-box; 
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box; 
 }
 
-.col-right {
-	display: inline-table;
-	width: 50%;
+.col:last-child {
+	padding-right: 0;
 }
 
 /* =================== Events =================== */
