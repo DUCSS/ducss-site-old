@@ -117,18 +117,23 @@ h3 {
 
 header {
 	display: block;
-	clear: both;
 	margin-bottom: 60px;
 	padding: 25px 0;
 	border-bottom: 1px solid #dedede;
 }
 
 header img#logo {
+	float: left;
+}
 
+header:after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 ul.nav {
-	display: inline-table;
+	display: inline-block;
 	float: right;
 	padding-top: 10px;
 }
@@ -197,16 +202,14 @@ section {
 }
 
 .col {
-	width: 50%;
+	width: 48%;
 	float: left;
-	padding-right: 20px;
-	box-sizing: border-box; 
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box; 
+	margin-right: 20px;
 }
 
 .col:last-child {
-	padding-right: 0;
+	width: 50%;
+	margin-right: 0;
 }
 
 /* =================== Events =================== */
@@ -423,5 +426,5 @@ footer #social a#facebook:hover {
 footer img#logo {
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 160px;
+	margin-left: 160px;
 }
