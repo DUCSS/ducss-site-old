@@ -116,12 +116,19 @@ h3 {
 /* =================== Header =================== */
 
 header {
+	display: block;
+	clear: both;
 	margin-bottom: 60px;
 	padding: 25px 0;
 	border-bottom: 1px solid #dedede;
 }
 
+header img#logo {
+
+}
+
 ul.nav {
+	display: inline-table;
 	float: right;
 	padding-top: 10px;
 }
