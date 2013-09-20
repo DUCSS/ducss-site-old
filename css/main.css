@@ -1,9 +1,20 @@
-/* ------ BEGIN RESET ------ */
+/*
+	DUCSS Website
+	by Matt Donnelly
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+	Last Updated: 20/09/13
+
+	Colors:
+		- Default body text  #808080
+		- Header text        #2d2d2d
+		- Dividers           #dedede
+		- Links              #ff8b0f
+
+	Fonts:
+		- Droid Sans
 */
+
+/* =================== Reset =================== */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,27 +66,54 @@ table {
 	border-spacing: 0;
 }
 
-/* ------ END RESET ------ */
+/* =================== Main =================== */
 
 body {
-	font-family: 'Droid Sans', sans-serif;
 	height: 100%;
+	font-family: 'Droid Sans', sans-serif;
+	color: #808080;
 }
 
 p {
 	line-height: 25px;
 	font-size: 1.1em;
-	color: #808080;
 }
 
 a {
+	color: #ff8b0f;
 	text-decoration: none;
+}
+
+h1 {
+	width: 100%;
+	margin-bottom: 40px;
+	padding-bottom: 25px;
+	font-size: 1.6em;
+	color: #ff8b0f;
+	border-bottom: 1px solid #dedede; 
+}
+
+h2 {
+	margin-bottom: 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #2d2d2d;
+}
+
+h3 {
+	margin-bottom: 10px;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2d2d2d;
 }
 
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
 }
+
+/* =================== Header =================== */
 
 header {
 	margin-bottom: 60px;
@@ -92,7 +130,6 @@ ul.nav li {
 	display: inline-block;
 	margin-left: 30px;
 	font-size: 1.1em;
-	color: #808080;
 	vertical-align: middle;
 }
 
@@ -102,29 +139,33 @@ ul.nav li:first-child {
 
 ul.nav a {
 	padding-bottom: 10px;
-	color: #808080;
 	text-decoration: none;
+	color: #808080;
 }
 
 ul.nav a#twitter {
 	display: inline-block;
-	padding-bottom: 0;
-	height: 41px;
 	width: 41px;
+	height: 41px;
+	padding-bottom: 0;
 	background: url(../assets/social-twitter.png) top no-repeat;
 }
 
 ul.nav a#facebook {
 	display: inline-block;
-	padding-bottom: 0;
-	height: 41px;
 	width: 41px;
+	height: 41px;
+	padding-bottom: 0;
 	background: url(../assets/social-facebook.png) top no-repeat;
 }
 
+ul.nav a:hover {
+	border-bottom: 2px solid #ff8b0f;
+}
+
 ul.nav a#twitter:hover {
-	background: url(../assets/social-twitter.png) bottom no-repeat;
 	border-bottom: none;
+	background: url(../assets/social-twitter.png) bottom no-repeat;
 }
 
 ul.nav a#facebook:hover {
@@ -132,85 +173,76 @@ ul.nav a#facebook:hover {
 	background: url(../assets/social-facebook.png) bottom no-repeat;
 }
 
-h1 {
-	width: 100%;
-	margin-bottom: 40px;
-	padding-bottom: 25px;
-	font-size: 1.6em;
-	color: #ff8b0f;
-	border-bottom: 1px solid #dedede; 
-}
-
-h2 {
-	font-weight: bold;
-	font-size: 1.3em;
-	margin-bottom: 10px;
-}
-
-h3 {
-	font-weight: bold;
-	font-size: 1.1em;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-}
+/* =================== Content =================== */
 
 section {
 	margin-bottom: 60px;
 }
 
-#events table {
-	padding-top: 50px;
+.row {
+	margin-bottom: 50px;
 }
 
-#events tr td {
-	clear: both;
-	width: 50%;
-	padding-right: 10px;
-	padding-bottom: 50px;
+.col-left {
+	display: inline-table;
+	width: 49%;
+	padding-right: 20px;
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box; 
 }
+
+.col-right {
+	display: inline-table;
+	width: 50%;
+}
+
+/* =================== Events =================== */
 
 .event {
 	margin-bottom: 20px;
 }
 
-#date {
+.event .date {
+	float: left;
 	height: 85px;
 	width: 100px;
 	margin-right: 20px;
-	float: left;
 	padding: 12px 0 0 0;
+	border-radius: 5px;
 	text-align: center;
 	background-color: #ff8b0f;
-	border-radius: 5px;
 }
 
-#date span.day {
+.event .date span.day {
 	display: block;
-	color: #fff;
-	text-align: center;
 	font-size: 2.8em;
 	font-weight: bold;
+	text-align: center;
+	color: #fff;	
 }
 
-#date span.month {
+.event .date span.month {
 	display: block;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
 	font-size: 1.5em;
 	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
 }
 
-#info {
+.event .info {
 	padding-top: 15px;
 }
 
-#info span {
+.event .info span {
 	display: block;
 	margin-bottom: 10px;
 	font-size: 1.1em;
 	color: #808080;
 }
+
+/* =================== Services =================== */
 
 .service {
 	margin-bottom: 30px;
@@ -223,23 +255,24 @@ section {
 }
 
 .service .left {
-	display: block;
+	display: inline-block;
 	float: left;
 	width: 49%;
 }
 
 .service .right {
-	display: block;
+	display: inline;
 	float: right;
 	width: 49%;
 }
 
-.service .right img {
+.service figure.right img {
 	margin-left: 60px;
 }
 
+/* =================== Contact Us =================== */
+
 input:focus,
-select:focus,
 textarea:focus,
 button:focus {
     outline: none;
@@ -268,9 +301,9 @@ input:focus {
 }
 
 textarea {
+	width: 85%;
 	max-width: 100%;
 	max-height: 450px;
-	width: 85%;
 	margin-bottom: 20px;
 	padding-top: 5px;
 	padding-left: 10px;
@@ -312,6 +345,8 @@ button:active {
 	top: 1px;
 }
 
+/* =================== Footer =================== */
+
 footer {
 	display: block;
 	padding-top: 40px;
@@ -321,12 +356,11 @@ footer {
 }
 
 footer .left, footer .centre, footer .right {
-	clear: both;
-	display: inline-table;
+	display: inline-block;
 	width: 33%;
 }
 
-a.back-to-top {
+footer a.back-to-top {
 	display: block;
 	vertical-align: middle;
 	font-size: 1.2em;
@@ -340,7 +374,7 @@ footer #social {
 	margin: 0 auto;
 }
 
-footer a#twitter {
+footer #social a#twitter {
 	display: inline-block;
 	margin-right: 30px;
 	vertical-align: middle;
@@ -349,7 +383,7 @@ footer a#twitter {
 	background: url(../assets/social-twitter.png) top no-repeat;
 }
 
-footer a#facebook {
+footer #social a#facebook {
 	display: inline-block;
 	margin-right: 30px;
 	vertical-align: middle;
@@ -358,11 +392,11 @@ footer a#facebook {
 	background: url(../assets/social-facebook.png) top no-repeat;
 }
 
-footer a#twitter:hover {
+footer #social a#twitter:hover {
 	background: url(../assets/social-twitter.png) bottom no-repeat;
 }
 
-footer a#facebook:hover {
+footer #social a#facebook:hover {
 	border-bottom: none;
 	background: url(../assets/social-facebook.png) bottom no-repeat;
 }
