@@ -191,23 +191,23 @@ section {
 	margin-bottom: 60px;
 }
 
-.row {
+section#events .row {
 	margin-bottom: 50px;
 }
 
-.row:after {
+section#events .row:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-.col {
+section#events .col {
 	width: 48%;
 	float: left;
 	margin-right: 20px;
 }
 
-.col:last-child {
+section#events .col:last-child {
 	width: 50%;
 	margin-right: 0;
 }
@@ -377,7 +377,7 @@ footer {
 	background-color: #2d2d2d;
 }
 
-footer .left, footer .centre, footer .right {
+footer .col {
 	display: inline-block;
 	width: 33%;
 }
