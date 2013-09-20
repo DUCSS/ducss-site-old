@@ -345,7 +345,7 @@ button:hover {
 }
 
 button:active {
-	top: 1px;
+	background-color: #e47600;
 }
 
 /* =================== Footer =================== */
