@@ -272,12 +272,16 @@ section {
 
 /* =================== Contact Us =================== */
 
+input,
+textarea,
+button {
+	font-family: inherit;
+}
+
 input:focus,
 textarea:focus,
 button:focus {
 	outline: none;
-	font-family: inherit;
-	font-size: inherit;
 }
 
 input {
