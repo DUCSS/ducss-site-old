@@ -22,7 +22,7 @@ body {
 
 .textBody {
 	margin: 60px auto;
-	width: 550px;
+	max-width: 550px;
 	text-align: justify;
 }
 
@@ -43,6 +43,12 @@ a {
 }
 
 ::selection {
+	color: #2d2d2d;
+	text-shadow:none;
+	background-color: #ff8b0f;
+}
+
+::-moz-selection {
 	color: #2d2d2d;
 	text-shadow:none;
 	background-color: #ff8b0f;
