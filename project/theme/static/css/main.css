@@ -160,7 +160,7 @@ ul.nav a#twitter {
 	width: 41px;
 	height: 41px;
 	padding-bottom: 0;
-	background: url("../assets/social-twitter.png") top no-repeat;
+	background: url("../img/social-twitter.png") top no-repeat;
 }
 
 ul.nav a#facebook {
@@ -168,7 +168,7 @@ ul.nav a#facebook {
 	width: 41px;
 	height: 41px;
 	padding-bottom: 0;
-	background: url("../assets/social-facebook.png") top no-repeat;
+	background: url("../img/social-facebook.png") top no-repeat;
 }
 
 ul.nav a:hover {
@@ -177,12 +177,12 @@ ul.nav a:hover {
 
 ul.nav a#twitter:hover {
 	border-bottom: none;
-	background: url("../assets/social-twitter.png") bottom no-repeat;
+	background: url("../img/social-twitter.png") bottom no-repeat;
 }
 
 ul.nav a#facebook:hover {
 	border-bottom: none;
-	background: url("../assets/social-facebook.png") bottom no-repeat;
+	background: url("../img/social-facebook.png") bottom no-repeat;
 }
 
 /* =================== Content =================== */
@@ -402,7 +402,7 @@ footer #social a#twitter {
 	vertical-align: middle;
 	height: 41px;
 	width: 41px;
-	background: url("../assets/social-twitter.png") top no-repeat;
+	background: url("../img/social-twitter.png") top no-repeat;
 }
 
 footer #social a#facebook {
@@ -411,16 +411,16 @@ footer #social a#facebook {
 	vertical-align: middle;
 	height: 41px;
 	width: 41px;
-	background: url("../assets/social-facebook.png") top no-repeat;
+	background: url("../img/social-facebook.png") top no-repeat;
 }
 
 footer #social a#twitter:hover {
-	background: url("../assets/social-twitter.png") bottom no-repeat;
+	background: url("../img/social-twitter.png") bottom no-repeat;
 }
 
 footer #social a#facebook:hover {
 	border-bottom: none;
-	background: url("../assets/social-facebook.png") bottom no-repeat;
+	background: url("../img/social-facebook.png") bottom no-repeat;
 }
 
 footer img#logo {
