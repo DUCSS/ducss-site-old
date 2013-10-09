@@ -1,24 +1,22 @@
-Website of the Dublin University Computer Science Society
+Website of the Dublin University Computer Science Society. This site is built with Mezzanine, which is 
+a Python Django blog system.
 
-All code lives in origin/gh-pages
 
-
-Test Deployment
+Development
 ===============
 
-Running the following command will serve a Python web server from the current directory
-
+Running the following command will setup a simple python webserver and run Mezzanine. 
 ```bash
-python -m SimpleHTTPServer
+python manage.py runserver 8080
 ```
 
-origin/gh-pages is deployed to http://nsno.github.io/ducss-site. Changes may take up to 10 minutes to show up there.
-
+To site is located at http://localhost:8080
 
 Deployment
 ==========
 
-Any web server
+Web server running python. Should really run on a solid database like MySQL in production and not on SQLite like in development. Having memcached installed and working in production is also a big plus.
+
 
 Design info
 ===========
