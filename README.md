@@ -5,6 +5,39 @@ a Python Django blog system.
 Development
 ===============
 
+## Installation
+
+### Virtualenv
+Suggested that you run the project inside a virtualenv. It isolates your global python package library from your development package library. This reduces the risk of conflicts and reduces risk of you accidentally breaking python packages across your system.
+
+To globally install virtualenv run
+```bash
+pip install virtualenv
+```
+Go to the root directory of this repository and run this command to create a virtualenv
+```bash
+virtualenv env
+```
+To activate the virtualenv run
+```bash
+source env/bin/activate
+```
+From now on any packages you install will be specific to this virtualenv. You must activate the env every time you want to install packages or run the code in this project.
+
+### Dependencies Install
+To install the dependencies run
+```bash
+pip install -r requirements.txt
+```
+
+### Setup
+You will have to setup a fake database at the start for you to dev with. The fastest way to do that is:
+```bash
+cd project
+python manage.py createdb
+```
+
+## Running the Development Server
 Running the following command will setup a simple python webserver and run Mezzanine. 
 ```bash
 python manage.py runserver 8080
