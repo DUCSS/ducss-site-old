@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Upcoming Events - {{ block.super }}{% endblock %}
+
+{% block body_html %}
+    <section id="events">
+        <h1>Upcoming Events</h1>
+
+        <div class="row">
+            {% for event in events %}
+                <div class="col">
+                    <div class="event">
+                        <div class="date">
+                            <span class="day">{{ event.date.day }}</span>
+                            <span class="month">{{ event.date|date:"b" }}</span>
+                        </div>
+                        <div class="info">
+                            <h3>{{ event.title }}</h3>
+                            <span>{{ event.location }}</span>
+                            <span>{{ event.time }}</span>
+                        </div>
+                    </div>
+                    <p>{{ event.description|truncatewords:30 }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

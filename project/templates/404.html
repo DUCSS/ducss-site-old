@@ -1,9 +1,11 @@
+{% load i18n %}
 <html>
-	<head>
-		<title>HTTP 404 Error - Page Not Found</title>
-	</head>
-	<body>
-		<h1>HTTP 404 Error</h1>
-		<h2>Page not found</h2>
-	</body>
+    <head>
+        <title>{% trans '404 - Page not found' %}</title>
+    </head>
+
+    <body>
+        <h1>{% trans 'Page not found' %}</h1>
+    </body>
 </html>
+
