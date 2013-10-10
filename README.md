@@ -7,6 +7,14 @@ Development
 
 ## Installation
 
+### First Off
+Make sure you have install `python-dev` and `python-pip` before continuing
+To install them run:
+```bash
+sudo apt-get install python-dev
+sudo apt-get install python-pip
+```
+
 ### Virtualenv
 Suggested that you run the project inside a virtualenv. It isolates your global python package library from your development package library. This reduces the risk of conflicts and reduces risk of you accidentally breaking python packages across your system.
 
@@ -42,7 +50,6 @@ Running the following command will setup a simple python webserver and run Mezza
 ```bash
 python manage.py runserver 8080
 ```
-
 To site is located at http://localhost:8080
 
 Deployment
