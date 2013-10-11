@@ -5,12 +5,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 DEVELOPMENT_MODE = False
 
-# Configures how javascript errors are reported. Enable these in local_settings.py
-# in while developing to see error content.
-SHOW_JS_ERRORS_IN_CONSOLE = False
-SHOW_JS_ERRORS_IN_CURRENT_WINDOW = False
-SHOW_JS_ERRORS_IN_POPUP = False
-
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -20,7 +14,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'database.sqlite3',                      # Or path to database file if using sqlite3.
+        'NAME': 'database.sqlite3',      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -133,7 +127,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'compressor',
 
-    # Apps
+    # apps
     'events',
     'utilities'
 )
@@ -159,9 +153,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 CRISPY_FAIL_SILENTLY = not DEBUG
 
 COMPRESS_ENABLED = True
-
-# Google Universal Analytics
-GOOGLE_ANALYTICS_CODE = 'UA-10656365-14'
 
 # Try to import local_settings.
 try:
