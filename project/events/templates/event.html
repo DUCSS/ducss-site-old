@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block title %}{{ event.title }} - {{ block.super }}{% endblock %}
+
+{% block body_html %}
+    <section id="event">
+        <h1>{{ event.title }}</h1>
+
+        <div class="row">
+            <div class="event">
+                <div class="date">
+                    <span class="day">{{ event.date.day }}</span>
+                    <span class="month">{{ event.date|date:"b" }}</span>
+                </div>
+                <div class="info">
+                    <span>{{ event.location }}</span>
+                    <span>{{ event.time }}</span>
+                </div>
+            </div>
+            <p>{{ event.description }}</p>
+        </div>
+    </section>
+{% endblock %}

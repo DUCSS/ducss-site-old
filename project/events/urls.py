@@ -10,4 +10,9 @@ urlpatterns = patterns('events',
         kwargs={'template':'listing.html'},
         name='listing'
     ),
+    url(r'(\s+)$',
+    	view='views.event',
+    	kwargs={'template':'event.html'},
+    	name='event'
+    )
 )
