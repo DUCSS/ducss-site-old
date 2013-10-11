@@ -24,3 +24,13 @@ def listing(request, template=None):
 
     context['events_listing_page'] = True
     return render_to_response(template, context_instance=context)
+
+def event(request, url_slug, template=None):
+    '''Full details for an event'''
+    context = RequestContext(request)
+
+    event = get_object_or_404(Event, slug=url_slug)
+
+    context['event'] = event
+    context['event_page'] = True
+    return render_to_response(template, context_instance=context)
