@@ -50,11 +50,12 @@ fi
 if [ ! -f "database.sqlite3" ]; then
 	new_install=true
 fi
-python project/manage.py syncdb --noinput;
-python project/manage.py migrate;
+( cd project ; python manage.py syncdb --noinput);
+( cd project ; python manage.py migrate);
 
 if $new_install ; then
-	echo ' ==== First Time Setup - Create an Administration Account ==== ';
-	python project/manage.py createsuperuser
+	echo ' ==== First Time Setup - Create an Administration Account ==== '; 
+	( cd project ; python manage.py createsuperuser );
 fi
-python project/manage.py runserver
+( cd project ; python manage.py runserver );
+
