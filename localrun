@@ -47,7 +47,7 @@ else
 fi
 
 
-if [ ! -f database.sqlite ]; then
+if [ ! -f "database.sqlite3" ]; then
 	new_install=true
 fi
 python project/manage.py syncdb --noinput;
