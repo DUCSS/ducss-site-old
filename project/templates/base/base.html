@@ -12,43 +12,45 @@
         {% endblock %}
     </head>
     <body>
-        <header>
-            <div class="wrapper">
-                <a href="/"><img src="{{ STATIC_URL }}base/images/nav-logo.png" alt="DUCSS" id="logo" /></a>
+        <div class="container">
+            <header>
+                <div class="wrapper">
+                    <a href="/"><img src="{{ STATIC_URL }}base/images/nav-logo.png" alt="DUCSS" id="logo" /></a>
 
-                <ul class="nav">
-                    <li><a href="/events/all">Upcoming Events</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="http://twitter.com/ducss" id="twitter"></a></li>
-                    <li><a href="https://www.facebook.com/groups/5813747845/" id="facebook"></a></li>
-                </ul>
-            </div>
-        </header>
-
-        <div class="wrapper">
-            {% block body_html %}
-            {% endblock %}
-        </div>
-
-        <footer> 
-            <div class="wrapper">
-                <div class="col">
-                    <a href="#" class="back-to-top">Back To Top</a>
+                    <ul class="nav">
+                        <li><a href="/events/all">Upcoming Events</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="http://twitter.com/ducss" id="twitter"></a></li>
+                        <li><a href="https://www.facebook.com/groups/5813747845/" id="facebook"></a></li>
+                    </ul>
                 </div>
-                <div class="col">
-                    <div id="social">
-                        <a href="http://twitter.com/ducss" id="twitter"></a>
-                        <a href="https://www.facebook.com/groups/5813747845/" id="facebook"></a>
+            </header>
+
+            <div id="body" class="wrapper">
+                {% block body_html %}
+                {% endblock %}
+            </div>
+
+            <footer> 
+                <div class="wrapper">
+                    <div class="col">
+                        <a href="#" class="back-to-top">Back To Top</a>
+                    </div>
+                    <div class="col">
+                        <div id="social">
+                            <a href="http://twitter.com/ducss" id="twitter"></a>
+                            <a href="https://www.facebook.com/groups/5813747845/" id="facebook"></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="{{ STATIC_URL }}base/images/footer-logo.png" id="logo" />
                     </div>
                 </div>
-                <div class="col">
-                    <img src="{{ STATIC_URL }}base/images/footer-logo.png" id="logo" />
-                </div>
-            </div>
-        </footer>
+            </footer>
 
-        {% block footer_javascript %}
-        {% endblock %}
+            {% block footer_javascript %}
+            {% endblock %}
+        </div>
     </body>
 </html>
