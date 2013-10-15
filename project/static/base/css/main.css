@@ -197,6 +197,7 @@ ul.nav a#facebook:hover {
 /* =================== Content =================== */
 
 section {
+	display: block;
 	margin-bottom: 60px;
 }
 
@@ -265,6 +266,13 @@ section#events .col:last-child {
 	margin-bottom: 10px;
 	font-size: 1.1em;
 	color: #808080;
+}
+
+.more-events {
+	clear: both;
+	padding-top: 50px;
+	text-align: center;
+	font-size: 1.2em;
 }
 
 /* =================== Services =================== */
