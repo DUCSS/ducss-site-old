@@ -13,7 +13,7 @@ def get_post_params(request):
         return (None, None)
 
 
-def init_form(FormClass, request, *form_args, **form_kwargs):
+def create_form(FormClass, request, *form_args, **form_kwargs):
     ''' Create an instance of the given FormClass, bound to post data if appropriate.
 
     FormClass -- The Django.forms.Form class to instantiate.
@@ -28,10 +28,3 @@ def init_form(FormClass, request, *form_args, **form_kwargs):
 
     # All other cases, return an unbound form.
     return FormClass(*form_args, **form_kwargs)
-
-class ColorPickerWidget(forms.TextInput):
-
-    def render(self, name, value, attrs=None):
-        rendered = super(ColorPickerWidget, self).render(name, value, attrs)
-        return rendered + render_to_string("utilities/color_picker.js", {'name': name})
-

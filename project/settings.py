@@ -1,9 +1,8 @@
 import os
 DIRNAME = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
-DEBUG = True
-TEMPLATE_DEBUG = True
-DEVELOPMENT_MODE = False
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -118,7 +117,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django.contrib.flatpages',
     'django.contrib.humanize',
     'django.contrib.markup',
 
@@ -128,6 +126,7 @@ INSTALLED_APPS = (
     'compressor',
 
     # apps
+    'main',
     'events',
     'utilities'
 )
@@ -149,7 +148,6 @@ TECH_ADMIN_EMAIL = 'admin@ducss.ie'
 SITE_ID = 1
 INTERNAL_IPS = ('127.0.0.1',)
 
-CRISPY_TEMPLATE_PACK = 'bootstrap'
 CRISPY_FAIL_SILENTLY = not DEBUG
 
 COMPRESS_ENABLED = True

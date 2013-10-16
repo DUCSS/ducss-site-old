@@ -7,11 +7,12 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$',
-        view='events.views.home',
-        kwargs={'template':'base/home.html'},
+        view='main.views.home',
+        kwargs={'template':'home.html'},
         name='home'
     ),
     (r'^events/', include('events.urls', namespace='events', app_name='events')),
+    (r'^/', include('main.urls', namespace='main', app_name='main')),
     url(r'^admin/', include(admin.site.urls))
 )
 

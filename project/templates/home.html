@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block body_html %}
+    <section id="events">
+        <h1>Upcoming Events</h1>
+
+        
+        {% for event in events %}
+            {% cycle '<div class="row">' '' %}
+                <div class="col">
+                    <div class="event">
+                        <div class="date">
+                            <span class="day">{{ event.date.day }}</span>
+                            <span class="month">{{ event.date|date:"b" }}</span>
+                        </div>
+                        <div class="info">
+                            <h3><a href="{% url events:event event.slug %}">{{ event.title }}</a></h3>
+                            <span>{{ event.location }}</span>
+                            <span>{{ event.time }}</span>
+                        </div>
+                    </div>
+                    <p>{{ event.description|truncatewords:30 }}</p>
+                </div>
+            {% cycle '' '</div>' %}
+        {% endfor %}
+
+        <div class="row">
+            <a href="/events/all">More events...</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+
+        {% for service in services %}
+            <div class="service">
+                <div class="{% cycle 'left' 'right' %}">
+                   <h2>{{ service.title }}</h2>
+                   <p>{{ service.description }}</p>
+                </div>
+                <figure class="{% cycle 'right' 'left' %}">
+                    <img src="{{ MEDIA_URL }}{{ service.image }}" alt="{{ service.title|lower }}" />
+                </figure>
+            </div>
+        {% endfor %}
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+
+        {% crispy contact_form %}
+    </section>
+{% endblock %}

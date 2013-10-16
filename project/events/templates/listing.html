@@ -1,4 +1,4 @@
-{% extends 'base/base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}Upcoming Events - {{ block.super }}{% endblock %}
 
@@ -15,7 +15,7 @@
                             <span class="month">{{ event.date|date:"b" }}</span>
                         </div>
                         <div class="info">
-                            <h3>{{ event.title }}</h3>
+                            <h3><a href="{% url events:event event.slug %}">{{ event.title }}</a></h3>
                             <span>{{ event.location }}</span>
                             <span>{{ event.time }}</span>
                         </div>
