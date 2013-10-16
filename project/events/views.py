@@ -11,7 +11,7 @@ def listing(request, template=None):
     '''Lists all the upcoming events'''
     context = RequestContext(request)
 
-    context['events'] = Event.objects.all().filter(date__gte=datetime.date.today())[:10]
+    context['events'] = Event.objects.all().filter(date__gte=datetime.date.today()).order_by('date')[:20]
 
     context['events_listing_page'] = True
     return render_to_response(template, context_instance=context)
