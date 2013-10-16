@@ -1,5 +1,5 @@
 DEBUG = True
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
@@ -26,7 +26,8 @@ settings.INSTALLED_APPS += ('debug_toolbar',)
 # Nice to have a simple cache for testing
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        #'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'LOCATION': 'ducss'
     }
 }

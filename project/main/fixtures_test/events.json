@@ -1,0 +1,68 @@
+[
+    {
+        "pk": 1, 
+        "model": "events.event", 
+        "fields": {
+            "date": "2013-10-31T18:00:00", 
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
+            "location": "East End Lab 1", 
+            "slug": "intro-to-python-talk", 
+            "title": "Introduction to Python Talk"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "events.event", 
+        "fields": {
+            "date": "2013-10-16T18:30:00", 
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
+            "location": "Maxwell Theatre", 
+            "slug": "newswhip-talk", 
+            "title": "NewsWhip Talk"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "events.event", 
+        "fields": {
+            "date": "2013-10-13T16:00:00", 
+            "description": "A representative from Goldman  Sachs is coming into DUCSS to talk about internship and careers opportunities with Goldman Sachs in Dublin and London. This is the first of many events that will be held throughout the year aimed at connecting members with tech companies in Ireland and aboard. At this event there is also free pizza and light refreshments. ", 
+            "location": "Lloyd Common Room", 
+            "slug": "goldman-sachs-careers-talk", 
+            "title": "Goldman Sachs Careers Talk"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "events.event", 
+        "fields": {
+            "date": "2013-10-23T18:30:00", 
+            "description": "Andrea, CTO of BatGames a game development company in Dublin, is doing a talk about games development. The focus of the talk will be on threading in Quake 3, concurrent processing and cool stuff that I cannot remember from the the email. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book", 
+            "location": "Maxwell Theatre, Hamilton Building", 
+            "slug": "games-development-talk-andrea", 
+            "title": "Games Development Talk by Andrea"
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "events.event", 
+        "fields": {
+            "date": "2013-10-29T18:30:00", 
+            "description": "Even more lorem ispum type data here. I wish I had a lorem ipsum plugin installed in this text editor.", 
+            "location": "Joly Theatre, Hamilton Building", 
+            "slug": "yet-another-talk", 
+            "title": "Yet Another Talk to DUCSS"
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "events.event", 
+        "fields": {
+            "date": "2013-09-15T18:30:00", 
+            "description": "Ispum type data here. I wish I had a lorem ipsum plugin installed in this text editor.", 
+            "location": "Joly Theatre, Hamilton Building", 
+            "slug": "some-other-talk", 
+            "title": "Some Other Talk to DUCSS"
+        }
+    }
+]

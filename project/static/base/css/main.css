@@ -108,9 +108,19 @@ h3 {
 	color: #2d2d2d;
 }
 
+label {
+	visibility: hidden;
+}
+
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
+}
+
+/* =============== Django Classes =============== */
+.help-inline {
+	font-style: italic;
+	color: #ff8b0f;
 }
 
 /* =================== Header =================== */
@@ -300,7 +310,9 @@ button:focus {
 	outline: none;
 }
 
-input {
+input[type=text],
+input[type=email],
+input[type=url] {
 	width: 70%;
 	height: 50px;
 	margin-bottom: 20px;
@@ -318,7 +330,9 @@ input {
 	background: linear-gradient(to bottom, #ececec 0px, #ffffff 3px);
 }
 
-input:focus {
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus {
 	border-color: #ff8b0f;
 }
 
@@ -348,7 +362,7 @@ textarea:focus {
 	border-color: #ff8b0f;
 }
 
-button {
+button, input[type=submit] {
 	margin-bottom: 20px;
 	padding: 15px 50px;
 	font-size: 1em;
@@ -360,11 +374,14 @@ button {
 	border-radius: 5px;
 }
 
-button:hover {
+button:hover,
+input[type=submit]:hover {
 	background-color: #ffa13c;
+	cursor: pointer;
 }
 
-button:active {
+button:active,
+input[type=submit]:active {
 	background-color: #e47600;
 }
 

@@ -1,0 +1,29 @@
+[
+    {
+        "pk": 1, 
+        "model": "main.service", 
+        "fields": {
+            "image": "services/figure-events.png", 
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.", 
+            "title": "Events"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "main.service", 
+        "fields": {
+            "image": "services/figure-servers.png", 
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
+            "title": "Servers"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "main.service", 
+        "fields": {
+            "image": "services/figure-room.png", 
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sum ego pariatur.", 
+            "title": "Room"
+        }
+    }
+]

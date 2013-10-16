@@ -34,7 +34,7 @@ function run()
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 rm -rf env
-virtualenv  env
+virtualenv env
 source env/bin/activate
 
 run "pip install -U setuptools"

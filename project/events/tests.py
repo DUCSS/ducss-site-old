@@ -1,16 +1,24 @@
-"""
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
+from django.core.urlresolvers import reverse
 
-Replace this with more appropriate tests for your application.
-"""
+from utilities.utils import CleanTestCase
 
-from django.test import TestCase
+class ViewsTest(CleanTestCase):
+	'''Tests for all the views in the events app'''
+	fixtures = [
+        'events.json'
+    ]
 
+	def test_event_page_view(self):
+		'''Tests the context for the page that shows
+		all the details about a certain event
+		'''
+		resp = self.client.get(reverse('events:event', args=('event1',)))
+		self.assertEqual(resp.status_code, 200)
+		self.assertTrue(resp.context['event_page'])
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+	def test_no_event_view_return_404(self):
+		'''Tests that if you request an event that doesn't exist
+		a HTTP 404 error is returned
+		'''
+		resp = self.client.get(reverse('events:event', args=('nope',)))
+		self.assertEqual(resp.status_code, 404)
