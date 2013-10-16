@@ -1,9 +1,6 @@
-<html>
-    <head>
-        <title>HTTP 500 - A server error has occurred</title>
-    </head>
+{% extends 'base.html' %}
 
-    <body>
-        <h1>Our fault! A server error has occurred. A DUCSS admin has been alerted to this problem and is dispatching a team of ill-trained first year computer science students to solve the problem.</h1>
-    </body>
-</html>
+{% block body_html %}
+    <h1>Our fault! A server error has occurred.</h1>
+    <p>A DUCSS admin has been alerted to this problem and is dispatching a team of ill-trained first year computer science students to solve the problem.</p>
+{% endblock %}
