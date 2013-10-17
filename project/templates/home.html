@@ -36,13 +36,23 @@
 
         {% for service in services %}
             <div class="service">
-                <div class="{% cycle 'left' 'right' %}">
-                   <h2>{{ service.title }}</h2>
-                   <p>{{ service.description }}</p>
-                </div>
-                <figure class="{% cycle 'right' 'left' %}">
-                    <img src="{{ MEDIA_URL }}{{ service.image }}" alt="{{ service.title|lower }}" />
-                </figure>
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="left">
+                       <h2>{{ service.title }}</h2>
+                       {{ service.description|safe }}
+                    </div>
+                    <figure class="right">
+                        <img src="{{ MEDIA_URL }}{{ service.image }}" alt="{{ service.title|lower }}" />
+                    </figure>
+                {% else %}
+                    <figure class="left">
+                        <img src="{{ MEDIA_URL }}{{ service.image }}" alt="{{ service.title|lower }}" />
+                    </figure>
+                    <div class="right">
+                       <h2>{{ service.title }}</h2>
+                       {{ service.description|safe }}
+                    </div>
+                {% endif %}
             </div>
         {% endfor %}
     </section>
