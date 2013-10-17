@@ -289,6 +289,7 @@ section#events .col:last-child {
 
 .service {
 	margin-bottom: 30px;
+	display: table;
 }
 
 .service::after {
@@ -298,21 +299,23 @@ section#events .col:last-child {
 }
 
 .service .left {
-	display: inline-block;
-	float: left;
+	display: table-cell;
 	width: 49%;
+	vertical-align: middle;
 }
 
 .service .right {
-	display: inline;
-	float: right;
+	display: table-cell;
 	width: 49%;
+	vertical-align: middle;
 }
 
 .service figure.right img {
 	margin-left: 60px;
 }
 
+.service p { margin-bottom: 10px; }
+.service p:last-child { margin-bottom: 0; }
 /* =================== Contact Us =================== */
 
 input,

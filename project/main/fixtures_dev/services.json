@@ -4,7 +4,7 @@
         "model": "main.service", 
         "fields": {
             "image": "services/figure-events.png", 
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.", 
+            "description": "<p>We run a tonne of events during the college year. We have speakers from the vibrant tech companies of Dublin come in. Last year we had Sean Blanchfield, co-founder and ex-CTO of Demonware, and speakers from MongoDB. This year we have speakers from BatGames, Bullet, BrimBrothers and GetHealth confirmed for this year already.</p>\r\n\r\n<p>We run a huge number of workshops and tutorials during the year to teach members how to code, manage and repair computers. Many of our tutorials. assume no knowledge of programming and is a great way to pick up a new language or to learn how to code for the first time.</p>\r\n\r\n<p>We also run a great number movie nights, programming competitions and game tournaments. The highlight of our events calendar is our (in)famous Christmas party and end of the year AGM.</p>", 
             "title": "Events"
         }
     }, 
@@ -13,7 +13,7 @@
         "model": "main.service", 
         "fields": {
             "image": "services/figure-servers.png", 
-            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
+            "description": "All of our members get access to our server cluster, where you can host a website, run  or do whatever you want (within reason obviously). We also run an IRC chat server that is connected to the majority of the university technology societies in the Ireland.", 
             "title": "Servers"
         }
     }, 
@@ -22,7 +22,7 @@
         "model": "main.service", 
         "fields": {
             "image": "services/figure-room.png", 
-            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sum ego pariatur.", 
+            "description": "We have our own room just off the Hamilton building in Trinity. The room is a great place to chill out between lectures. There is a 42 inch TV with a game cube, PS3 and xbox 360, four high powered PCs and some great couches to relax on.  The room also contains our library with over 70 books, on every topic from building a website for the first time to mastering the art of computer programming.", 
             "title": "Room"
         }
     }
