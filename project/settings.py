@@ -157,3 +157,9 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+# Try to import deployment_settings.
+try:
+    from deployment_settings import *
+except ImportError:
+    pass
