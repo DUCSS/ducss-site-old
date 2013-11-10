@@ -12,6 +12,11 @@ urlpatterns = patterns('',
         name='home'
     ),
     (r'^events/', include('events.urls', namespace='events', app_name='events')),
+    url(r'^event/(?P<slug>[-\w]+)/$',
+        view='events.views.event',
+        kwargs={'template':'event.html'},
+        name='event_clean'
+    ),
     (r'^/', include('main.urls', namespace='main', app_name='main')),
     url(r'^admin/', include(admin.site.urls))
 )
