@@ -6,23 +6,23 @@
     <section id="events">
         <h1>Upcoming Events</h1>
 
-        <div class="row">
-            {% for event in events %}
-                <div class="col">
-                    <div class="event">
-                        <div class="date">
-                            <span class="day">{{ event.date.day }}</span>
-                            <span class="month">{{ event.date|date:"b" }}</span>
-                        </div>
-                        <div class="info">
-                            <h3><a href="{% url events:event event.slug %}">{{ event.title }}</a></h3>
-                            <span>{{ event.location }}</span>
-                            <span>{{ event.time }}</span>
-                        </div>
+        {% for event in events %}
+            {% cycle '<div class="row">' '' %}
+            <div class="col">
+                <div class="event">
+                    <div class="date">
+                        <span class="day">{{ event.date.day }}</span>
+                        <span class="month">{{ event.date|date:"b" }}</span>
                     </div>
-                    {{ event.description|truncatewords_html:30|safe }}
+                    <div class="info">
+                        <h3><a href="{% url events:event event.slug %}">{{ event.title }}</a></h3>
+                        <span>{{ event.location }}</span>
+                        <span>{{ event.time }}</span>
+                    </div>
                 </div>
-            {% endfor %}
-        </div>
+                <p>{{ event.description|truncatewords_html:30|safe }}</p>
+            </div>
+            {% cycle '' '</div>' %}
+        {% endfor %}
     </section>
 {% endblock %}
