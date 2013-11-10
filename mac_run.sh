@@ -28,8 +28,12 @@ if [ ! -d "../virtualenvs/$VENV_NAME" ]; then
 	which -s virtualenv || pip install virtualenv
 
 	#Setting up virtualenv
-	mkdir "../virtualenvs"
-	virtualenv --no-site-packages "../virtualenvs/$VENV_NAME"
+	
+    if [ ! -d "../virtualenvs" ]; then
+        mkdir "../virtualenvs"
+    fi
+	
+    virtualenv --no-site-packages "../virtualenvs/$VENV_NAME"
 
 	source "../virtualenvs/$VENV_NAME/bin/activate"
 
