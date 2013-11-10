@@ -16,7 +16,7 @@
                             <span class="month">{{ event.date|date:"b" }}</span>
                         </div>
                         <div class="info">
-                            <h3><a href="{% url events:event event.slug %}">{{ event.title }}</a></h3>
+                            <h3><a href="{% url event_clean event.slug %}">{{ event.title }}</a></h3>
                             <span>{{ event.location }}</span>
                             <span>{{ event.time }}</span>
                         </div>
