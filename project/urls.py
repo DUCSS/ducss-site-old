@@ -11,11 +11,17 @@ urlpatterns = patterns('',
         kwargs={'template':'home.html'},
         name='home'
     ),
+    (r'^library/', include('library.urls', namespace='library', app_name='library')),
     (r'^events/', include('events.urls', namespace='events', app_name='events')),
     url(r'^event/(?P<slug>[-\w]+)/$',
         view='events.views.event',
         kwargs={'template':'event.html'},
         name='event_clean'
+    ),
+    url(r'^book/(?P<id>[-\w]+)/$',
+        view='library.views.book',
+        kwargs={'template':'book.html'},
+        name='book_clean'
     ),
     (r'^/', include('main.urls', namespace='main', app_name='main')),
     url(r'^admin/', include(admin.site.urls))
