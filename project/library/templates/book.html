@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} - {{ block.super }}{% endblock %}
+
+{% block body_html %}
+    <section id="event">
+        <h1>{{ book.title }}</h1>
+
+        <div class="row">
+            <div class="event">
+                <div class="date">
+                    <span class="day">{{ book.title }}</span>
+                </div>
+                <div class="info">
+                    <span>{{ book.description }}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

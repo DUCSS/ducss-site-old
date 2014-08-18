@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Library - {{ block.super }}{% endblock %}
+
+{% block body_html %}
+    <section id="library">
+        <h1>Our Library</h1>
+
+        {% for book in books %}
+            {% cycle '<div class="row">' '' %}
+            <div class="col">
+                <div class="event">
+                    <div class="date">
+                        <span>{{ book.title }}</span>
+                    </div>
+                    <div class="info">
+                        <h3><a href="{% url library:book book.id %}">{{ book.title }}</a></h3>
+                        <span>{{ book.description }}</span>
+                    </div>
+                </div>
+            </div>
+            {% cycle '' '</div>' %}
+        {% endfor %}
+    </section>
+{% endblock %}
