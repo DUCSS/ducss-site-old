@@ -30,6 +30,7 @@ class Reservation(models.Model):
 
   book_id = models.ForeignKey('Book')
   member_name = models.CharField(max_length=128)
+  email = models.EmailField()
   date_created = models.DateTimeField()
 
   def __unicode__(self):
