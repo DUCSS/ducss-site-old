@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 
 class Author(models.Model):
@@ -31,7 +32,7 @@ class Reservation(models.Model):
   book_id = models.ForeignKey('Book')
   member_name = models.CharField(max_length=128)
   email = models.EmailField()
-  date_created = models.DateTimeField()
+  date_created = models.DateTimeField(default=datetime.now())
 
   def __unicode__(self):
     return self.member_name + ":" + self.book_id
