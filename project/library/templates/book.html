@@ -9,9 +9,12 @@
         <div class="row">
             <div class="event">
                 <div class="date">
-                    <span class="day">{{ book.title }}</span>
+                    <span class="day"></span>
                 </div>
                 <div class="info">
+                    {% for author in book.authors.all %}
+                      <span>{{ author }}</span>
+                    {% endfor %}
                     <span>{{ book.description }}</span>
                 </div>
             </div>
