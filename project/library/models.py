@@ -35,4 +35,4 @@ class Reservation(models.Model):
   date_created = models.DateTimeField(default=datetime.now())
 
   def __unicode__(self):
-    return self.member_name + ":" + self.book_id
+    return self.member_name + ": " + str(self.book_id)
