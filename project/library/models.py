@@ -18,6 +18,8 @@ class Book(models.Model):
   isbn13 = models.CharField(max_length=13)
   description = models.TextField()
   authors = models.ManyToManyField(Author)
+  year_published = models.SmallIntegerField(null=True)
+  status = models.TextField(default="In")
 
   def __unicode__(self):
     return self.title
@@ -32,15 +34,3 @@ class Reservation(models.Model):
 
   def __unicode__(self):
     return self.member_name + ":" + self.book_id
-
-
-class Status(models.Model):
-  '''Object for a books current status'''
-
-  book_id = models.ForeignKey('Book')
-  status = models.TextField()
-  last_member = models.CharField(max_length=128)
-
-
-  def __unicode__(self):
-    return self.book_id + ":" + self.status;
