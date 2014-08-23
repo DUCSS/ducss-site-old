@@ -10,7 +10,7 @@ urlpatterns = patterns('library',
         kwargs={'template':'book_listing.html'},
         name='listing'
     ),
-    url(r'^library/(?P<id>[-\w]+)/$',
+    url(r'^book/(?P<id>[-\w]+)/$',
       view='views.book',
       kwargs={'template':'book.html'},
       name='book'
