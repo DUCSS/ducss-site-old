@@ -14,5 +14,10 @@ urlpatterns = patterns('library',
       view='views.book',
       kwargs={'template':'book.html'},
       name='book'
+    ),
+    url(r'^book/(?P<id>[-\w]+)/reserve$',
+      view='views.reserve',
+      kwargs={'template':'reservation.html'},
+      name='reservation'
     )
 )

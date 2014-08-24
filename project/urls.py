@@ -18,10 +18,15 @@ urlpatterns = patterns('',
         kwargs={'template':'event.html'},
         name='event_clean'
     ),
-    url(r'^book/(?P<id>[-\w]+)/$',
+    url(r'^library/book/(?P<id>[-\w]+)/$',
         view='library.views.book',
         kwargs={'template':'book.html'},
         name='book_clean'
+    ),
+    url(r'^library/book/(?P<id>[-\w]+)/reserve$',
+        view='library.views.reserve',
+        kwargs={'template':'library/reserve.html'},
+        name='reserve_clean'
     ),
     (r'^/', include('main.urls', namespace='main', app_name='main')),
     url(r'^admin/', include(admin.site.urls))
