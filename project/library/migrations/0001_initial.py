@@ -20,10 +20,10 @@ class Migration(SchemaMigration):
         db.create_table('library_book', (
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=128)),
-            ('isbn', self.gf('django.db.models.fields.CharField')(max_length=13)),
-            ('isbn13', self.gf('django.db.models.fields.CharField')(max_length=13)),
-            ('description', self.gf('django.db.models.fields.TextField')()),
-            ('year_published', self.gf('django.db.models.fields.SmallIntegerField')(null=True)),
+            ('isbn', self.gf('django.db.models.fields.CharField')(max_length=13, null=True, blank=True)),
+            ('isbn13', self.gf('django.db.models.fields.CharField')(max_length=13, null=True, blank=True)),
+            ('description', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
+            ('year_published', self.gf('django.db.models.fields.SmallIntegerField')(null=True, blank=True)),
             ('status', self.gf('django.db.models.fields.SmallIntegerField')(default=0, max_length=2)),
         ))
         db.send_create_signal('library', ['Book'])
@@ -72,13 +72,13 @@ class Migration(SchemaMigration):
         'library.book': {
             'Meta': {'object_name': 'Book'},
             'authors': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['library.Author']", 'symmetrical': 'False'}),
-            'description': ('django.db.models.fields.TextField', [], {}),
+            'description': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'isbn': ('django.db.models.fields.CharField', [], {'max_length': '13'}),
-            'isbn13': ('django.db.models.fields.CharField', [], {'max_length': '13'}),
+            'isbn': ('django.db.models.fields.CharField', [], {'max_length': '13', 'null': 'True', 'blank': 'True'}),
+            'isbn13': ('django.db.models.fields.CharField', [], {'max_length': '13', 'null': 'True', 'blank': 'True'}),
             'status': ('django.db.models.fields.SmallIntegerField', [], {'default': '0', 'max_length': '2'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '128'}),
-            'year_published': ('django.db.models.fields.SmallIntegerField', [], {'null': 'True'})
+            'year_published': ('django.db.models.fields.SmallIntegerField', [], {'null': 'True', 'blank': 'True'})
         },
         'library.reservation': {
             'Meta': {'object_name': 'Reservation'},
