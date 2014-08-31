@@ -16,9 +16,9 @@
                       <span>{{ author }}</span>
                     {% endfor %}
                     <span>{{ book.description }}</span>
-                    <span>Status: {{ book.status }}</span>
-                    {% if book.status == 'in' %}
-                      <a href="./reserve" class="reserve"><button>Reserve book</button></a>
+                    <span>Status: {{ book.get_status_display }}</span>
+                    {% if book.status == book.IN %}
+                      <a href="{% url library.views.reserve book.id %}" class="reserve"><button>Reserve book</button></a>
                     {% endif %}
                 </div>
             </div>
