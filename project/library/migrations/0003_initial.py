@@ -23,6 +23,8 @@ class Migration(SchemaMigration):
             ('isbn', self.gf('django.db.models.fields.CharField')(max_length=13)),
             ('isbn13', self.gf('django.db.models.fields.CharField')(max_length=13)),
             ('description', self.gf('django.db.models.fields.TextField')()),
+            ('year_published', self.gf('django.db.models.fields.SmallIntegerField')(null=True)),
+            ('status', self.gf('django.db.models.fields.SmallIntegerField')(default=0, max_length=2)),
         ))
         db.send_create_signal('library', ['Book'])
 
@@ -40,18 +42,10 @@ class Migration(SchemaMigration):
             ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('book_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['library.Book'])),
             ('member_name', self.gf('django.db.models.fields.CharField')(max_length=128)),
-            ('date_created', self.gf('django.db.models.fields.DateTimeField')()),
+            ('email', self.gf('django.db.models.fields.EmailField')(max_length=75)),
+            ('date_created', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2014, 8, 31, 0, 0))),
         ))
         db.send_create_signal('library', ['Reservation'])
-
-        # Adding model 'Status'
-        db.create_table('library_status', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('book_id', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['library.Book'])),
-            ('status', self.gf('django.db.models.fields.TextField')()),
-            ('last_member', self.gf('django.db.models.fields.CharField')(max_length=128)),
-        ))
-        db.send_create_signal('library', ['Status'])
 
 
     def backwards(self, orm):
@@ -66,9 +60,6 @@ class Migration(SchemaMigration):
 
         # Deleting model 'Reservation'
         db.delete_table('library_reservation')
-
-        # Deleting model 'Status'
-        db.delete_table('library_status')
 
 
     models = {
@@ -85,21 +76,17 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'isbn': ('django.db.models.fields.CharField', [], {'max_length': '13'}),
             'isbn13': ('django.db.models.fields.CharField', [], {'max_length': '13'}),
-            'title': ('django.db.models.fields.CharField', [], {'max_length': '128'})
+            'status': ('django.db.models.fields.SmallIntegerField', [], {'default': '0', 'max_length': '2'}),
+            'title': ('django.db.models.fields.CharField', [], {'max_length': '128'}),
+            'year_published': ('django.db.models.fields.SmallIntegerField', [], {'null': 'True'})
         },
         'library.reservation': {
             'Meta': {'object_name': 'Reservation'},
             'book_id': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['library.Book']"}),
-            'date_created': ('django.db.models.fields.DateTimeField', [], {}),
+            'date_created': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2014, 8, 31, 0, 0)'}),
+            'email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'member_name': ('django.db.models.fields.CharField', [], {'max_length': '128'})
-        },
-        'library.status': {
-            'Meta': {'object_name': 'Status'},
-            'book_id': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['library.Book']"}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'last_member': ('django.db.models.fields.CharField', [], {'max_length': '128'}),
-            'status': ('django.db.models.fields.TextField', [], {})
         }
     }
 
