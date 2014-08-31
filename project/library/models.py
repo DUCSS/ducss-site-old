@@ -13,6 +13,18 @@ class Author(models.Model):
 
 class Book(models.Model):
   '''Object for library books'''
+  IN = 0
+  OUT = 1
+  MISSING = 2
+  REFERENCE = 3
+
+  STATUS_CHOICES = (
+      (IN, 'In'),
+      (OUT, 'Out'),
+      (MISSING, 'Missing'),
+      (REFERENCE, 'This is a reference book and cannot be checked out')
+  )
+
 
   title = models.CharField(max_length=128)
   isbn = models.CharField(max_length=13)
@@ -20,7 +32,7 @@ class Book(models.Model):
   description = models.TextField()
   authors = models.ManyToManyField(Author)
   year_published = models.SmallIntegerField(null=True)
-  status = models.TextField(default="In")
+  status = models.SmallIntegerField(default=IN, max_length=2, choices=STATUS_CHOICES)
 
   def __unicode__(self):
     return self.title
