@@ -27,11 +27,11 @@ class Book(models.Model):
 
 
   title = models.CharField(max_length=128)
-  isbn = models.CharField(max_length=13)
-  isbn13 = models.CharField(max_length=13)
-  description = models.TextField()
+  isbn = models.CharField(max_length=13, blank=True, null=True)
+  isbn13 = models.CharField(max_length=13, blank=True, null=True)
+  description = models.TextField(blank=True, null=True)
   authors = models.ManyToManyField(Author)
-  year_published = models.SmallIntegerField(null=True)
+  year_published = models.SmallIntegerField(blank=True, null=True)
   status = models.SmallIntegerField(default=IN, max_length=2, choices=STATUS_CHOICES)
 
   def __unicode__(self):
