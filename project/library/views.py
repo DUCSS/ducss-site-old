@@ -32,14 +32,14 @@ def reserve(request, id, template=None):
     '''Reserve a book in the library'''
     context = RequestContext(request)
     book = get_object_or_404(Book, pk=id)
-    if book.status.lower() == 'in':
+    if book.status == book.IN:
       if request.method == 'POST':
         form = ReservationForm(request.POST)
-        if form.is_valid() and book.status.lower() == 'in':
+        if form.is_valid() and book.status == book.IN :
           reservation = form.save(commit=False)
           reservation.book_id = book
           reservation.save()
-          book.status = 'reserved'
+          book.status = book.OUT
           book.save()
           return redirect('library.views.book', id=id)
         else:
