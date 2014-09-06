@@ -10,16 +10,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'database.sqlite3',      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
+import dj_database_url
+DATABASES = {'default': dj_database_url.config()}
 
 CACHES = {
     'default': {
@@ -51,7 +43,7 @@ MEDIA_URL = '/%s/' % UPLOADS_DIRNAME
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
-STATIC_ROOT = os.path.normpath(os.path.join(DIRNAME, '..', 'static'))
+STATIC_ROOT = 'staticfiles'
 
 # URL prefix for static files.
 STATIC_URL = '/static/'
@@ -69,6 +61,16 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
 )
+
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+BOTO_S3_BUCKET = AWS_STORAGE_BUCKET_NAME
+AWS_S3_SECURE_URLS = False
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+if not DEBUG:
+    STATIC_URL = S3_URL
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = "b2052d6e-ab87-45fb-a80e-83790c54ad037cac7022-7fa9-4fdc-808d-2d8faff813d70545bb68-6506-45e3-9e07-0393591be717"
@@ -90,6 +92,13 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'urls'
+WSGI_APPLICATION = 'wsgi.application'
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
 # Regex patterns used in multiple url.py files.
 DOMAIN_PATTERN = '(?P<domain>[\w-]+\.[\w.-]+)'
@@ -124,6 +133,7 @@ INSTALLED_APPS = (
     'south',
     'crispy_forms',
     'compressor',
+    'storages',
 
     # apps
     'main',
@@ -153,10 +163,11 @@ CRISPY_FAIL_SILENTLY = not DEBUG
 COMPRESS_ENABLED = True
 
 # Try to import local_settings.
-try:
-    from local_settings import *
-except ImportError:
-    pass
+if DEBUG:
+    try:
+        from local_settings import *
+    except ImportError:
+        pass
 
 # Try to import deployment_settings.
 try:
