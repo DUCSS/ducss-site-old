@@ -128,7 +128,8 @@ INSTALLED_APPS = (
     # apps
     'main',
     'events',
-    'utilities'
+    'utilities',
+    'library'
 )
 
 # List of additional directories to look for fixtures in.

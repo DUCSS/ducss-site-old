@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} - {{ block.super }}{% endblock %}
+
+{% block body_html %}
+    <section id="event">
+        <h1>{{ book.title }}</h1>
+
+        <div class="row">
+            <div class="event">
+                <div class="date">
+                    <span class="day"></span>
+                </div>
+                <div class="info">
+                    {% for author in book.authors.all %}
+                      <span>{{ author }}</span>
+                    {% endfor %}
+                    <span>{{ book.description }}</span>
+                    <span>Status: {{ book.get_status_display }}</span>
+                    {% if book.status == book.IN %}
+                      <a href="{% url library.views.reserve book.id %}" class="reserve"><button>Reserve book</button></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

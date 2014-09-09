@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} - {{ block.super }}{% endblock %}
+
+{% block body_html %}
+    <section id="event">
+      {% load crispy_forms_tags %}
+      {% crispy reserve_form reserve_form.helper %}
+    </section>
+{% endblock %}
