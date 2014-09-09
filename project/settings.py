@@ -73,7 +73,7 @@ if not DEBUG:
     STATIC_URL = S3_URL
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "b2052d6e-ab87-45fb-a80e-83790c54ad037cac7022-7fa9-4fdc-808d-2d8faff813d70545bb68-6506-45e3-9e07-0393591be717"
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
