@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DUCSS Freshers Week</title>
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}base/favicon.ico">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}base/css/freshers.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="wrapper">
+          <a href="/"><img src="{{ STATIC_URL }}base/images/nav-logo.png" alt="DUCSS" id="logo" /></a>
+
+          <ul class="nav">
+            <li><a href="http://twitter.com/ducss" id="twitter"></a></li>
+            <li><a href="https://www.facebook.com/groups/5813747845/" id="facebook"></a></li>
+            <li><a href="{% url home %}">Continue to site &rarr;</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div id="body" class="wrapper">
+        <section id="freshers">
+          <h1>Freshers Week 2014</h1>
+          <p>
+            We're doing a bunch during Trinity Freshers Week 2014! Whether you're interested in games, social events (the pub!) or just chilling out in between your Freshers Week orientation we have something for you!
+          </p>
+          <p>
+            For more info on our Freshers Week events and to join DUCSS find us at Trinity Hall, Dartry on Saturday 13th or at Front Square anytime during Freshers Week which is September 15th-19th!
+          </p>
+          <div class="row">
+            <div class="col games">
+              <img src="{{ STATIC_URL }}base/images/figure-games.png" width="200" height="200">
+              <h2>Games</h2>
+              <p>
+                Everyday of the week we're going to be running a games tournament in our room in the Hamilton Building. There will be daily prizes awarded to our champions with our Friday Mario Kart tournament being the highlight of the week!
+              </p>
+              <br>
+              <p class="get-over-there">
+                The schedule looks a little like this:
+                <ul>
+                  <li>Mon 4PM: Soulcalibur V</li>
+                  <li>Tue 4PM: Halo</li>
+                  <li>Wed 4PM: Mario Party 8</li>
+                  <li>Thu 1PM: Super Smash Bros.</li>
+                  <li>Fri 2PM: Mario Kart</li>
+                </ul> 
+              </p>
+            </div>
+            <div class="col">
+              <img src="{{ STATIC_URL }}base/images/figure-social.png" width="200" height="200">
+              <h2>Social Outings</h2>
+              <p>
+                It wouldn't be Freshers Week without a night out or two! Wednesday night takes us to Trinity's famous student bar, The Pavilion (Pav). We'll be meeting there at 8PM for drinks and then we'll be heading on to "Somewhere?" at Workman's Club from 10:30 till late. DUCSS card-holders get discounted entry and there are drinks promotions all night.
+              </p>
+              <br>
+              <p>
+                Thursday evening we'll be going to O'Neill's pub on Pearse Street from 8PM for drinks and bonding. We'll be laying on plenty of free finger food to feast on and it's sure to be a great night to hang out with all of our new 2014/15 members.
+              </p>
+            </div>
+            <div class="col">
+              <img src="{{ STATIC_URL }}base/images/figure-room.png" width="200" height="200">
+              <h2>Room</h2>
+              <p>
+                Freshers Week can get a little hectic with so much to do and see around campus! For that reason our room in the Hamilton Building will be open all week so you can rest up on one of our couches or check out our gaming-spec PCs. This also helps as a way to get to know new people in computer science and hang out with those in your year!
+              </p>
+              <br>
+              <p>
+                Directions to the DUCSS room can be found on the back of your membership card or you can ask one of our lovely committee members (we'll be wearing DUCSS t-shirts) in Front Square.
+              </p>
+            </div>
+          </div> 
+        </section>
+      </div>
+
+      <footer> 
+        <div class="wrapper">
+          <div class="col">
+            <a href="#" class="back-to-top">Back To Top</a>
+          </div>
+          <div class="col">
+            <div id="social">
+              <a href="http://twitter.com/ducss" id="twitter"></a>
+              <a href="https://www.facebook.com/groups/5813747845/" id="facebook"></a>
+            </div>
+          </div>
+          <div class="col">
+            <img src="{{ STATIC_URL }}base/images/footer-logo.png" id="logo" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

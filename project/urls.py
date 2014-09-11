@@ -2,14 +2,15 @@ from django.conf.urls.defaults import patterns, include, url
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
+from django.views.generic import TemplateView
+
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$',
-        view='main.views.home',
-        kwargs={'template':'home.html'},
-        name='home'
+        TemplateView.as_view(template_name='freshers.html'),
+        name='freshers'
     ),
     (r'^library/', include('library.urls', namespace='library', app_name='library')),
     (r'^events/', include('events.urls', namespace='events', app_name='events')),
@@ -28,7 +29,11 @@ urlpatterns = patterns('',
         kwargs={'template':'library/reserve.html'},
         name='reserve_clean'
     ),
-    (r'^/', include('main.urls', namespace='main', app_name='main')),
+    url(r'^home/',
+        view='main.views.home',
+        kwargs={'template': 'home.html'},
+        name='home'
+    ),
     url(r'^admin/', include(admin.site.urls))
 )
 
