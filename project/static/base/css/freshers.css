@@ -90,6 +90,7 @@ ul.nav a {
   padding-bottom: 10px;
   text-decoration: none;
   color: #808080;
+  font-weight: normal;
 }
 
 ul.nav a#twitter {
