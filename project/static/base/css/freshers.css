@@ -136,7 +136,8 @@ p {
 }
 
 a {
-  color: #ff8b0f;
+  color: #808080;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -304,4 +305,8 @@ section#freshers .col p {
 
 .get-over-there {
   text-align: left !important;
+}
+
+strong {
+  font-weight: bold;
 }
