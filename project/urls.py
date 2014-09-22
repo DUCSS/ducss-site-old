@@ -9,8 +9,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$',
-        TemplateView.as_view(template_name='freshers.html'),
-        name='freshers'
+        view='main.views.home',
+        kwargs={'template': 'home.html'},
+        name='home'
     ),
     (r'^library/', include('library.urls', namespace='library', app_name='library')),
     (r'^events/', include('events.urls', namespace='events', app_name='events')),
@@ -28,11 +29,6 @@ urlpatterns = patterns('',
         view='library.views.reserve',
         kwargs={'template':'library/reserve.html'},
         name='reserve_clean'
-    ),
-    url(r'^home/',
-        view='main.views.home',
-        kwargs={'template': 'home.html'},
-        name='home'
     ),
     url(r'^admin/', include(admin.site.urls))
 )
