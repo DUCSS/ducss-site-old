@@ -13,7 +13,7 @@ def listing(request, template=None):
     '''Lists all the libraries books'''
     context = RequestContext(request)
 
-    context['books'] = Book.objects.all()
+    context['books'] = Book.objects.all().prefetch_related("authors")
 
     context['books_listing_page'] = True
     return render_to_response(template, context_instance=context)

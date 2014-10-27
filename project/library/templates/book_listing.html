@@ -3,22 +3,31 @@
 {% block title %}Our Library - {{ block.super }}{% endblock %}
 
 {% block body_html %}
-    <section id="library">
+    <section id="events">
         <h1>Our Library</h1>
 
         {% for book in books %}
-            {% cycle '<div class="row">' '' %}
-            <div class="col">
-                <div class="event">
-                    <div class="date">
-                    </div>
-                    <div class="info">
-                        <h3><a href="{% url library:book book.id %}">{{ book.title }}</a></h3>
-                        <span>{{ book.description|truncatewords_html:30|safe  }}</span>
-                    </div>
-                </div>
-            </div>
-            {% cycle '' '</div>' %}
+          <div class="row">
+              <div class="event">
+                  <div class="date">
+                  </div>
+                  <div class="info">
+                      <h3><a href="{% url library:book book.id %}">{{ book.title }}</a></h3>
+                      <span>
+                        {% if book.description %}
+                          {{ book.description|truncatewords_html:30|safe  }}
+                        {% endif %}
+                      </span>
+                      <span>
+                        <span>
+                          {% for author in book.authors.all %}
+                            {{ author|truncatewords_html:30|safe  }}
+                          {% endfor %}
+                        </span>
+                      </span>
+                  </div>
+              </div>
+          </div>
         {% endfor %}
     </section>
 {% endblock %}
