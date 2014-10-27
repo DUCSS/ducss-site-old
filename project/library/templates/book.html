@@ -15,9 +15,9 @@
                     {% for author in book.authors.all %}
                       <span>{{ author }}</span>
                     {% endfor %}
-                    <br />
-                    <br />
                     <span>Status: {{ book.get_status_display }}</span>
+                    <br />
+                    <br />
                     {% if book.status == book.IN %}
                       <a href="{% url library.views.reserve book.id %}" class="reserve"><button>Reserve book</button></a>
                     {% endif %}
