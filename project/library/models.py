@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.db import models
+import re
 
 class Author(models.Model):
   '''Object for book author'''
@@ -7,8 +8,20 @@ class Author(models.Model):
   first_name = models.CharField(max_length=128)
   last_name = models.CharField(max_length=128)
 
+  @classmethod
+  def create_from_csv(cls, author_lf):
+      name = re.split(',',author_lf)
+      first = name[1]
+      surname = name[0]
+      author = Author.objects.all().filter(first_name=first, last_name = surname)
+      if len(author) == 0:
+          author = cls(first_name=first, last_name=surname)
+          author.save()
+          author = Author.objects.all().filter(first_name=first, last_name = surname)
+      return author
+
   def __unicode__(self):
-    return self.last_name + ", " + self.first_name
+    return self.first_name + " " + self.last_name 
 
 
 class Book(models.Model):

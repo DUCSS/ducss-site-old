@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('library',
-    url(r'^all$',
+    url(r'^$',
         view='views.listing',
         kwargs={'template':'book_listing.html'},
         name='listing'
