@@ -405,6 +405,12 @@ input[type=submit]:active {
 	background-color: #e47600;
 }
 
+/* =================== Library =================== */
+.bookCount {
+	float:right;
+}
+
+
 /* =================== Footer =================== */
 
 footer {

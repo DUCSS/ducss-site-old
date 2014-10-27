@@ -4,7 +4,7 @@
 
 {% block body_html %}
     <section id="events">
-        <h1>Our Library</h1>
+        <h1>Our Library<span class="bookCount">{{ books.count }} books</span></h1>
 
         {% for book in books %}
           <div class="row">
