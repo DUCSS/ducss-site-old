@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DUCSS Hackathon</title>
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}base/favicon.ico">
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}base/css/hackathon.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="wrapper">
+          <a href="{% url home %}"><img src="{{ STATIC_URL }}base/images/nav-logo.png" alt="DUCSS" id="logo" /></a>
+
+          <ul class="nav">
+            <li><a href="http://twitter.com/ducss" id="twitter"></a></li>
+            <li><a href="https://www.facebook.com/ducss.ie" id="facebook"></a></li>
+            <li><a href="{% url home %}">Continue to site &rarr;</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div id="body" class="wrapper">
+        <section id="hackathon">
+          <h1>DUCSS Hackathon sponsored by <a href="http://guidewire.com"><img class="inline-image" src="{{ STATIC_URL }}base/images/guidewire.png" height="23"></a> for <a href="http://spunout.ie"><img class="inline-image" src="{{ STATIC_URL }}base/images/spunout.png" height="23"></a></h1>
+          <br>
+          <p>
+            Ever wanted to hack on something meaningful? Want to earn fantastic prizes while doing it?
+          </p>
+          <p>
+            DUCSS, sponsored by <a href="http://careers.guidewire.com">Guidewire</a> and in association with <a href="http://spunout.ie">SpunOut.ie</a> are holding a hackathon in Trinity Hall, November 22nd from 10AM. The theme is supporting mental health, and you, together with your team, will get an opportunity to work on something meaningful that ties together mental health awareness and education with the modern world of technology and the internet!
+          </p>
+          <br>
+          <p>
+            There are some great prizes up for grabs with <strong>&euro;50 Amazon vouchers</strong> going to each member of the winning team. Every participant with also leave with a <strong>Raspberry Pi</strong> so there's no reason not to <a href="sign up link">sign up!</a>
+          </p>
+          <p>
+            Make sure to do it quick as <strong>places are limited!</strong>
+          </p>
+          <br>
+          <div style="text-align:center;">
+            <a class="button-link" href="https://docs.google.com/forms/d/1pvm6wfNEoxxKZYgCMXwhXlk0C4ThX9Hg4_FImQCRTDA/viewform">Sign up now!</a>
+            <br>
+            <br>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="{{ STATIC_URL }}base/images/figure-location.png" width="200" height="200">
+              <h2>WHERE?</h2>
+              <p>
+                The hackathon will be taking place in the canteen in <strong>Trinity Hall</strong> on Saturday November 22nd from 10AM.
+              </p>
+              <br>
+              <p>
+                Trinity Hall is located a short bus ride away from the City Centre campus. The 140 bus from Nassau Street will take you opposite the main gates.
+              </p>
+            </div>
+            <div class="col">
+              <img src="{{ STATIC_URL }}base/images/figure-prize.png" width="200" height="200">
+              <h2>PRIZES?</h2>
+              <p>
+                We've got some fantastic prizes lined up for our winners! Each member of the winning team will be going home with <strong>&euro;50 Amazon vouchers</strong> in their pockets!
+              </p>
+              <br>
+              <p>
+                Just because you don't win doesn't mean you leave empty-handed however, as all participants will be getting a <strong>Raspberry Pi</strong> kit. If that's not reason enough to enter, we don't know what is!
+              </p>
+            </div>
+            <div class="col">
+              <img src="{{ STATIC_URL }}base/images/figure-brain.png" width="200" height="200">
+              <h2>MENTAL HEALTH?</h2>
+              <p>
+                <a href="http://spunout.ie">SpunOut.ie</a> is Ireland's leading website created by young people for young people. SpunOut offer thousands of pages containing advice on topics such as mental health, sexual health, drugs, equality and politics.
+              </p>
+              <br>
+              <p>
+                SpunOut, having a large web presence are an example of a charity embracing modern technology. The aim of the hackathon is to create new and innovative technologies to help young people in the modern digital world.
+              </p>
+            </div>
+          </div> 
+          <div style="text-align:center; padding-top: 20px">
+            <strong>Please note</strong>: Only Trinity College Dublin students may enter and active participation is required to earn a Raspberry Pi.
+            <br>
+            <br>
+            <br>
+            <br>
+            <a class="button-link" href="https://docs.google.com/forms/d/1pvm6wfNEoxxKZYgCMXwhXlk0C4ThX9Hg4_FImQCRTDA/viewform">Sign up now!</a>
+            <a class="button-link" href="http://careeers.guidewire.com">Visit Guidewire's Careers page</a>
+          </div>
+        </section>
+      </div>
+
+      <footer> 
+        <div class="wrapper">
+          <div class="col">
+            <a href="#" class="back-to-top">Back To Top</a>
+          </div>
+          <div class="col">
+            <div id="social">
+              <a href="http://twitter.com/ducss" id="twitter"></a>
+              <a href="https://www.facebook.com/ducss.ie" id="facebook"></a>
+            </div>
+          </div>
+          <div class="col">
+            <img src="{{ STATIC_URL }}base/images/footer-logo.png" id="logo" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
