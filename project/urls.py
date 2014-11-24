@@ -17,6 +17,10 @@ urlpatterns = patterns('',
         TemplateView.as_view(template_name='hackathon.html'),
         name='hackathon'
     ),
+    url(r'^pokemon/',
+        TemplateView.as_view(template_name='pokemon.html'),
+        name='pokemon'
+    ),
     (r'^library/', include('library.urls', namespace='library', app_name='library')),
     (r'^events/', include('events.urls', namespace='events', app_name='events')),
     url(r'^event/(?P<slug>[-\w]+)/$',
