@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block title %}Our Library - {{ block.super }}{% endblock %}
 
 {% block body_html %}
@@ -9,8 +8,7 @@
         {% for book in books %}
           <div class="row">
               <div class="event">
-                  <div class="date">
-                  </div>
+                  <img class="coverListing" src="http://covers.openlibrary.org/b/isbn/{{book.isbn13}}-M.jpg" />
                   <div class="info">
                       <h3><a href="{% url library:book book.id %}">{{ book.title }}</a></h3>
                       <span>
