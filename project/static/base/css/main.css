@@ -410,6 +410,24 @@ input[type=submit]:active {
 	float:right;
 }
 
+.coverListing {
+	float: left;
+	height: 85px;
+	margin-right: 20px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #ff8b0f;
+}
+
+.cover {
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #ff8b0f;
+}
+
 
 /* =================== Footer =================== */
 

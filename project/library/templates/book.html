@@ -8,9 +8,7 @@
 
         <div class="row">
             <div class="event">
-                <div class="date">
-                    <span class="day"></span>
-                </div>
+                <img class="cover" src="http://covers.openlibrary.org/b/isbn/{{book.isbn13}}-M.jpg" />
                 <div class="info">
                     {% for author in book.authors.all %}
                       <span>{{ author }}</span>
